@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PerryPal21/perry.css@master/perry.css">
+    <title>The Janky URL Shortener</title>
+</head>
+<body>
+    <style>
+        input {
+            width: 100%;
+        }
+        button {
+            margin: auto;
+         }
+
+        div {
+            display: grid;
+        }
+
+footer {
+      position: fixed;
+      left: 10px;
+      bottom: 15px;
+      right: 10px;
+      width: 95%;
+      text-align: center;
+    }
+
+    </style>
+    <div class="container">
+    <h2>The Janky URL Shortener</h2>
+    <p>Any URL shortened will be deleted after 2 weeks</p>
+    <br>
+    <input type="text" id="box">
+    <br>
+    <div>
+        <button id="submit">Submit</button>
+    </div>
+    <script>
+        const submitBtn = document.getElementById('submit')
+        const box = document.getElementById('box')
+        submitBtn.addEventListener("click", () => {
+		window.location.replace('https://{{YOUR DOMAIN HERE}}?url=' + box.value)
+        }); 
+    </script>
+      <footer>
+         <a href="">Source Code</a>
+    </footer>
+    </div>
+</body>
+</html>
